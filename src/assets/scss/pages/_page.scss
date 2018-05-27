@@ -1,0 +1,42 @@
+@-ms-viewport {
+    width: device-width;
+}
+
+html {
+    width: 100%;
+    overflow-y: scroll;
+    background: transparent;
+}
+
+body {
+    -webkit-text-size-adjust: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    font-family: _font(family);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #000000;
+    background: transparent;
+    outline: none;
+    -moz-font-feature-settings: 'kern' 1;
+    -o-font-feature-settings: 'kern' 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+#app {
+    width: 100vw;
+    min-height: 100vh;
+    background-position: left top;
+    background-repeat: repeat;
+    @include vendor('transition', ( 'background-color #{_duration(switchDuration)} ease-in-out,  background-image #{_duration(switchDuration)} ease-in-out'));
+    @include themifyParent($themes) {
+        background-color: _themes(appBgColor);
+        background-image: url(_themes(appBgImage));
+    }
+}

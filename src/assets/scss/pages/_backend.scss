@@ -1,0 +1,190 @@
+.back-card {
+    @include themify($themes) {
+        border-color: _themes(cardBorderColor);
+        background-color: _themes(cardBgColor);
+        &.backend-login-card {
+            // @include vendor('transition', ( 'background-color #{_duration(switchDuration)} ease-in-out'));
+            // @include vendor('transition', ( 'border-color #{_duration(switchDuration)} ease-in-out'));
+            .card-footer {
+                //@include vendor('transition', ( 'background-color #{_duration(switchDuration)} ease-in-out'));
+                background-color: _themes(cardBgColor);
+            }
+        }
+        &.back-list-card {
+            @include vendor('transition', ( 'all #{_duration(switchDuration)} ease-in-out'));
+            .back-list-table {
+                th,
+                td {
+                    color: _themes(fontDarkColor);
+                    border-color: _themes(tableBorderColor);
+                    @include vendor('transition', ( 'all #{_duration(switchDuration)} ease-in-out'));
+                }
+                thead {
+                    background-color: _themes(cardHeaderColor);
+                    @include vendor('transition', ( 'all #{_duration(switchDuration)} ease-in-out'));
+                }
+                tfoot {
+                    a {
+                        color: _themes(fontBrightColor);
+                        background: _themes(moreBtnBgColor);
+                        @include vendor('transition', ( 'all #{_duration(switchDuration)} ease-in-out'));
+                    }
+                }
+            }
+            .table-hover tbody tr:hover {
+                background-color: _themes(tableHoverColor);
+            }
+        }
+        &.modify-card {
+            @include vendor('transition', ( 'all #{_duration(switchDuration)} ease-in-out'));
+            .card-footer {
+                @include vendor('transition', ( 'all #{_duration(switchDuration)} ease-in-out'));
+                background-color: _themes(cardBgColor);
+            }
+        }
+        &.back-comment-card {
+            @include vendor('transition', ( 'all #{_duration(switchDuration)} ease-in-out'));
+            .card-body {
+                .comment-item {
+                    @include vendor('transition', ( 'background-color #{_duration(switchDuration)} ease-in-out'));
+                    background-color: _themes(commentBgColor);
+                }
+            }
+            .card-footer {
+                @include vendor('transition', ( 'background-color #{_duration(switchDuration)} ease-in-out'));
+                background-color: _themes(cardBgColor);
+                &>a {
+                    color: _themes(fontBrightColor);
+                    background-color: _themes(moreBtnBgColor);
+                    @include vendor('transition', ( 'all #{_duration(switchDuration)} ease-in-out'));
+                }
+            }
+        }
+    }
+}
+
+.back-list-card {
+    .back-list-table {
+        border-radius: 0.25rem;
+        th {
+            font-size: 0.9375rem;
+            font-weight: bold;
+        }
+        td {
+            font-size: 0.875rem;
+        }
+        thead {
+            tr {
+                white-space: nowrap;
+            }
+            th {
+                border: none;
+            }
+        }
+        tbody {
+            .list-action {
+                a {
+                    margin-right: 0.375rem;
+                    color: _statics(linkColor);
+                    text-transform: capitalize;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &:hover {
+                        color: _statics(successlinkColor);
+                    }
+                }
+            }
+        }
+        tfoot {
+            td {
+                padding: 0.375rem 1.25rem;
+            }
+            a {
+                display: block;
+                border-radius: 0.25rem;
+                line-height: 2rem;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.back-comment-card {
+    .card-body {
+        .comment-item {
+            border: none;
+            padding: 1.125rem 0;
+            color: _statics(fontDarklessColor);
+        }
+        .comment-content-wrap {
+            font-size: 1rem;
+            margin-left: 0.75rem;
+            .comment-author-wrap {
+                line-height: 1;
+                display: block;
+                margin-top: 0.0625rem;
+                color: _statics(fontGreyestColor);
+                &>a {
+                    color: _statics(linkColor);
+                }
+            }
+            .comment-content {
+                margin-top: 0.3125rem;
+            }
+            .comment-footer {
+                line-height: 1;
+                font-size: 0.875rem;
+                display: block;
+                margin-top: 0.375rem;
+                color: _statics(fontGreyestColor);
+                .comment-action-item {
+                    color: _statics(fontGreyestColor);
+                    &:hover {
+                        color: _statics(linkColor);
+                    }
+                }
+            }
+        }
+    }
+    .card-footer {
+        border: none;
+        &>a {
+            display: block;
+            border-radius: 0.25rem;
+            line-height: 2rem;
+            text-align: center;
+        }
+    }
+}
+
+.editormd {
+    // z-index: 2;
+    margin-bottom: 0;
+    @include vendor('transition', ( 'border-color #{_duration(switchDuration)} ease-in-out'));
+}
+
+.editormd,
+.editormd .CodeMirror {
+    border-radius: 5px;
+}
+
+.editormd .CodeMirror,
+.editormd .CodeMirror .CodeMirror-code .CodeMirror-activeline-background {
+    @include vendor('transition', ( 'background #{_duration(switchDuration)} ease-in-out'));
+}
+
+.editormd-toolbar,
+.editormd-menu>li.divider,
+.editormd-menu>li>a {
+    @include vendor('transition', ( 'all #{_duration(switchDuration)} ease-in-out'));
+}
+
+.editormd .CodeMirror .CodeMirror-gutters {
+    @include vendor('transition', ( 'border #{_duration(switchDuration)} ease-in-out, background #{_duration(switchDuration)} ease-in-out'));
+}
+
+.editormd.editormd-fullscreen,
+.editormd.editormd-fullscreen .CodeMirror {
+    border-radius: 0;
+}
