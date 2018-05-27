@@ -36,6 +36,28 @@ $ npm run build
 
 The **user frontend** can be accessed at `http://localhost:8088`.  The **admin backend** can be accessed at `http://localhost:8088/backend`.
 
+#### Examples
+
+##### Administrator Login
+<img src="https://github.com/gorgila/evo-blog/raw/master/gifs/1-backend-login.gif" width="640" />
+
+##### Creating Categories / Publishing Articles
+<img src="https://github.com/gorgila/evo-blog/raw/master/gifs/2-backend-category-article.gif" width="640" />
+
+##### Manage Users
+<img src="https://github.com/gorgila/evo-blog/raw/master/gifs/3-backend-users.gif" width="640" />
+
+##### User Register/Login/Like/Comment
+<img src="https://github.com/gorgila/evo-blog/raw/master/gifs/4-frontend-login-comment.gif" width="640" />
+
+##### Navigation of Content / Night Mode
+<img src="https://github.com/gorgila/evo-blog/raw/master/gifs/5-frontend-nav.gif" width="640" />
+
+##### Filtering and Searching
+<img src="https://github.com/gorgila/evo-blog/raw/master/gifs/6-frontend-search.gif" width="640" />
+
+##### User Account Management
+<img src="https://github.com/gorgila/evo-blog/raw/master/gifs/7-frontend-account.gif" width="640" />
 
 
 ------------
